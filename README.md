@@ -1,7 +1,5 @@
 # 东北师范大学硕士学位论文Latex模版
-<img src="https://img.shields.io/badge/language-Latex-green.svg"/><img src="https://img.shields.io/github/last-commit/benzj/
-NNU_Latex_temple.svg"/><img src="https://img.shields.io/github/repo-size/benzj/
-NNU_Latex_temple.svg"/>
+<img src="https://img.shields.io/badge/language-Latex-green.svg"/><img src="https://img.shields.io/github/last-commit/benzj/NNU_Latex_temple.svg"/><img src="https://img.shields.io/github/repo-size/benzj/NNU_Latex_temple.svg"/>
 
 Latex写论文确实能减少很多排版和引用的复杂复杂工作量。在前辈本科论文模版的基础上修改得到的硕士学位论文模版。
 
