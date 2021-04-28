@@ -1,0 +1,57 @@
+% !Mode:: "TeX:UTF-8"
+
+% !TEX program = LATEXMK
+\documentclass[zhcn]{nenuthesis}
+% tiankonguse <i@tiankonguse.com>
+%
+\setcounter{secnumdepth}{4}
+%
+% 定义所有的eps文件在 figures 子目录下
+\graphicspath{{figures/}}
+%
+\begin{document}
+%\inputencoding{utf8}
+%
+% include message
+\include{pages/message}
+% cover
+%\include{pages/covere}
+\include{pages/coverc}
+%
+\frontmatter
+\pagenumbering{Roman}
+%
+%中文摘要
+\include{pages/absc}
+%
+%英文摘要
+\include{pages/abse}
+%
+% 目录
+\chaptermark{目录}
+\addcontentsline{toc}{chapter}{目录}
+\tableofcontents
+%\listoffigures
+%\listoftables
+%
+%
+\clearpage
+%
+\mainmatter
+% 开始正文 -----------
+%
+% 绪论 & 相关工作 & 引言 
+\include{pages/intro}
+%
+\include{pages/relateworks}
+%
+% 第三章 样本测试
+\include{pages/chap03}
+\include{pages/chap04}
+%
+\backmatter %结束章节自动编号
+%
+%\bibliographystyle{plain}
+\bibliography{ref/refs.bib}
+\end{document}
+%
