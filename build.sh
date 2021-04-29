@@ -1,0 +1,1 @@
+latexmk -synctex=1 -interaction=nonstopmode -file-line-error  -pdf -f tiankonguse.tex

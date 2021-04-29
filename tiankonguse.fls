@@ -2,7 +2,7 @@ PWD /Users/benz/Downloads/NENUCSThesis-master
 INPUT /usr/local/texlive/2020/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-var/web2c/xetex/xelatex.fmt
-INPUT /Users/benz/Downloads/NENUCSThesis-master/tiankonguse.tex
+INPUT tiankonguse.tex
 OUTPUT tiankonguse.log
 INPUT nenuthesis.cls
 INPUT nenuthesis.cls
