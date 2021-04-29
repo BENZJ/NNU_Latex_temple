@@ -108,12 +108,17 @@
 
 \punctstyle{kaiming}
 
-\setCJKmainfont[BoldFont={SimSun}, ItalicFont={SimSun}]{SimSun}
+% \setCJKmainfont[BoldFont={SimSun}, ItalicFont={SimSun}]{SimSun}
 %\setCJKsansfont{Droid Sans Fallback}
 % \setCJKsansfont{Microsoft YaHei}
+
+
+%%% 正文主题的字体
 \setCJKsansfont{Adobe Heiti Std}
-\setCJKmonofont{SimSun}
-\setCJKfamilyfont{song}{SimSun}
+\setCJKmonofont{Adobe Song Std}
+\setCJKfamilyfont{song}{Adobe Song Std}
+%%%
+
 \setCJKfamilyfont{lishu}{LiSu}
 \setCJKfamilyfont{zhLiSu}[AutoFakeBold = {4.17}]{LiSu}
 % \renewcommand*{\zhLiSu}{\CJKfamily{zhLiSu}}
@@ -128,6 +133,8 @@
 % \setmainfont{SimSun}
 % \setsansfont{SimSun}
 % \setmonofont{SimSun}
+
+
 % 标点处理格式 行末半角 所有标点占一个汉字宽度 行首行末对齐
 \xeCJKEditPunctStyle{hangmobanjiao}{enabled-global-setting = false}
 
@@ -142,7 +149,7 @@
 
 
 \let\songti\relax
-\newCJKfontfamily\songti{SimSun}[AutoFakeBold]
+\newCJKfontfamily\songti{Adobe Song Std}[AutoFakeBold]
 
 \let\heiti\relax
 \newCJKfontfamily\heiti{Adobe Heiti Std}[AutoFakeBold]
@@ -153,11 +160,11 @@
 % \newcommand{\fs}{\CJKfamily{fs}}        % 仿宋体
 % \def\fangsong{\fs}
 
-% \newcommand{\kai}{\CJKfamily{kai}}      % 楷体
-% \def\kaishu{\kai}
+\newcommand{\kai}{\CJKfamily{kai}}      % 楷体
+\def\kaishu{\kai}
 
-% \newcommand{\hei}{\CJKfamily{hei}}      % 黑体
-% \def\heiti{\hei}
+\newcommand{\hei}{\CJKfamily{hei}}      % 黑体
+\def\heiti{\hei}
 
 % \newcommand{\li}{\CJKfamily{li}}        % 隶书
 % \def\lishu{\li}
@@ -315,7 +322,7 @@
 %% 论文题目，宋体五号；距页上边1.5cm
 %% @TODO 单面打印时，页眉内容靠左边（为了环保，暂时不管）
 %% 双面打印时，页眉内容奇数页靠左，偶数靠右
-\fancyhead[CO,CE]{\song \zihao{5} \nsheadc}
+\fancyhead[CO,CE]{\songti \zihao{5} \nsheadc}
 %% 页脚：
 %% 页码，字体 Times New Roman，五号加黑
 %% 奇数页右侧,偶数页在左侧,页脚距页下边 1.5cm,
