@@ -40,6 +40,8 @@
 \mainmatter
 % 开始正文 -----------
 %
+\include{pages/yingyan}
+%
 % 绪论 & 相关工作 & 引言 
 \include{pages/intro}
 %
@@ -50,9 +52,13 @@
 \include{pages/chap03}
 \include{pages/chap04}
 %
+\include{pages/jieyu}
 \backmatter %结束章节自动编号
 %
-%\bibliographystyle{plain}
+% \bibliographystyle{plain}
+
+\addcontentsline{toc}{chapter}{参考文献}
 \bibliography{ref/refs.bib}
+\include{pages/thanks}
 \end{document}
 %
