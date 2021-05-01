@@ -22,6 +22,8 @@
 *.out
 *.ps
 *.toc
+*.synctex.gz
+*.fdb_latexmk
 .~lock*
 word/_1272409074_.doc
 

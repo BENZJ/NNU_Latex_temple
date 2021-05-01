@@ -181,26 +181,9 @@
 \def\nenu@define@fontsize#1#2{%
   \expandafter\newcommand\csname #1\endcsname[1][\baselinestretch]{%
     \nenu@choosefont{##1}{#2}}}
-% \nenu@define@fontsize{chuhao}{42bp}
-% \nenu@define@fontsize{xiaochu}{36bp}
-% \nenu@define@fontsize{yihao}{26bp}
-% \nenu@define@fontsize{xiaoyi}{24bp}
-% \nenu@define@fontsize{erhao}{22bp}
-% \nenu@define@fontsize{xiaoer}{18bp}
-% \nenu@define@fontsize{sanhao}{16bp}
-% \nenu@define@fontsize{xiaosan}{15bp}
-% \nenu@define@fontsize{sihao}{14bp}
-% \nenu@define@fontsize{banxiaosi}{13bp}
-% \nenu@define@fontsize{xiaosi}{12bp}
-% \nenu@define@fontsize{dawu}{11bp}
-% \nenu@define@fontsize{wuhao}{10.5bp}
-% \nenu@define@fontsize{xiaowu}{9bp}
-% \nenu@define@fontsize{liuhao}{7.5bp}
-% \nenu@define@fontsize{xiaoliu}{6.5bp}
-% \nenu@define@fontsize{qihao}{5.5bp}
-% \nenu@define@fontsize{bahao}{5bp}
-% % Pre format ---------------------------------------
 
+% % Pre format ---------------------------------------
+% % 设置一些信息（学生，导师，题目等等）
 % title
 \DeclareRobustCommand{\nstitlec}{}
 \DeclareRobustCommand{\nstitlee}{}
@@ -273,31 +256,58 @@
 \DeclareRobustCommand{\nshead}[1]{
 	\renewcommand{\nsheadc}{#1}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\titlecontents{chapter}[1.5em]{}%
-%{第 \thecontentslabel{} 章\hspace{1em}}{}{\titlerule*[10pt]{.}\contentspage}
 
-\titleformat{\chapter}[hang]{\centering\zihao{3}\heiti}{\thechapter}{1em}{}{}
+%%%%%%%%目录设置%%%%%%%%
+\CTEXsetup[format={\bf}]{chapter}
+\CTEXsetup[name={,、}]{chapter}   
+\CTEXsetup[number={ (\chinese{section})}]{section} 
+\CTEXsetup[number={ \arabic{subsection}.}]{subsection}  
+% \CTEXsetup[format={\Large\bfseries}]{section}
+% \CTEXsetup[name={第,章}]{section}                            %设置章标题字号为Large，居左
+% \CTEXsetup[number={ \chinese{section}}]{section}                      %section形式改为一,二,三,..
+% \CTEXsetup[name={（,）}]{subsection}                                 
+% \CTEXsetup[number={\chinese{subsection}}]{subsection}                %subsection形式改为（一,二,三,...）
+% \CTEXsetup[number=\arabic{subsubsection}]{subsubsection}             %subsubsection形式改为1，2，3，...
+
+
+\dottedcontents{chapter}[2em]{\normalsize}{2.0em}{4pt}
+\dottedcontents{section}[3.0em]{\normalsize}{2.0em}{4pt}
+\dottedcontents{subsection}[4.0em]{\normalsize}{2.0em}{4pt}
+
+\setcounter{secnumdepth}{4}
+% \setcounter{tocdepth}{3}
+% \titlecontents{section}
+%               [3cm]
+%               {\bf \large}%
+%               {\contentslabel{2.5em}}%
+%               {}%
+%               {\titlerule*[0.5pc]{$\cdot$}\contentspage\hspace*{3cm}}%
+
+\titleformat{\chapter}[hang]{\centering\zihao{3}\heiti}{\chinese{chapter}、}{1em}{}{}
 \titlespacing{\chapter}{0pt}{0.2\baselineskip}{0.2\baselineskip}
-\titlecontents{chapter}[2.2em]{}%
-{\hspace{1em}\thecontentslabel\hspace{1em}}{}{\titlerule*[10pt]{.}\contentspage}
+% \titlecontents{chapter}[]{\bf}%
+% {\thecontentslabel}{}{\titlerule*[10pt]{.}\contentspage}
 
 \titleformat{\section}[hang]%
-  {\zihao{4}\heiti}{\thesection}{1em}{}{}
+  {\zihao{4}\heiti}{(\chinese{section})}{1em}{}{}
 \titlespacing{\section}%
   {0pt}{0.2\baselineskip}{0.2\baselineskip}
-\titlecontents{section}[2.2em]{}%
-{\hspace{1em}\thecontentslabel\hspace{1em}}{}{\titlerule*[7pt]{.}\contentspage}
+% \titlecontents{section}[2.2em]{}%
+% {\hspace{1em}\thecontentslabel\hspace{1em}}{}{\titlerule*[7pt]{.}\contentspage}
 
 \titleformat{\subsection}[hang]%
-  {\zihao{5}\heiti}{\thesubsection}{1em}{}{}
+  {\zihao{5}\heiti}{\arabic{subsection}}{1em}{}{}
 \titlespacing{\subsection}%
   {0pt}{0.1\baselineskip}{0.1\baselineskip}
-\titlecontents{subsection}[3.0em]{}%
-{\hspace{2em}\thecontentslabel\hspace{1em}}{}{\titlerule*[5pt]{.}\contentspage}
+% \titlecontents{subsection}[3.0em]{}%
+% {\hspace{2em}\thecontentslabel\hspace{1em}}{}{\titlerule*[5pt]{.}\contentspage}
 
-\titleformat{\subsubsection}[hang]{\zihao{-4}}{\thesubsubsection}{1em}{}{}
-\titlespacing{\subsubsection}{0pt}{0.0\baselineskip}{0.0\baselineskip}
+% \titleformat{\subsubsection}[hang]{\zihao{-4}}{\thesubsubsection}{1em}{}{}
+% \titlespacing{\subsubsection}{0pt}{0.0\baselineskip}{0.0\baselineskip}
+
+%%%%%%%%目录设置结束%%%%%%%%
 
 % Other settings ------------------------------------------------
 %% 行距
@@ -348,7 +358,7 @@
     \newtheorem{problem}{问题}[chapter]
     \newtheorem{conjecture}{猜想}[chapter]
 
-    \renewcommand\contentsname{\centerline{\zihao{3} \heiti 目\hspace{1em}录}}
+    \renewcommand\contentsname{\centerline{\zihao{3} \heiti 目\hspace{2em}录}}
     \renewcommand\listfigurename{插图索引}
     \renewcommand\listtablename{表格索引}
     \newcommand\listequationname{公式索引}
