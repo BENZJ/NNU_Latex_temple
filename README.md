@@ -18,7 +18,9 @@ Latex写论文确实能减少很多排版和引用的复杂复杂工作量。在
 ## 参考链接
 - [github latex模版集合](https://github.com/hantang/collection-latex-templates)
 - [东北师范大学本科模版14年](https://github.com/tiankonguse/NENUCSThesis)
-
+- [latex解决目录文字](https://blog.csdn.net/weixin_45734379/article/details/114136448)
+- [目录中无法显示参考文献](https://blog.csdn.net/weixin_34204057/article/details/91812554)
+- [目录定制](https://www.jianshu.com/p/ccd14653a128)
 ## 更新日志
 ### 2020.04.30
 1. 修改SimSum字体统一为Adobe Song Std
