@@ -262,7 +262,7 @@
 %%%%%%%%目录设置%%%%%%%%
 \CTEXsetup[format={\bf}]{chapter}
 \CTEXsetup[name={,、}]{chapter}   
-\CTEXsetup[number={ (\chinese{section})}]{section} 
+\CTEXsetup[number={ （\chinese{section}）}]{section} 
 \CTEXsetup[number={ \arabic{subsection}.}]{subsection}  
 % \CTEXsetup[format={\Large\bfseries}]{section}
 % \CTEXsetup[name={第,章}]{section}                            %设置章标题字号为Large，居左
@@ -291,7 +291,7 @@
 % {\thecontentslabel}{}{\titlerule*[10pt]{.}\contentspage}
 
 \titleformat{\section}[hang]%
-  {\zihao{4}\heiti}{(\chinese{section})}{1em}{}{}
+  {\zihao{4}\heiti}{（\chinese{section}）}{1em}{}{}
 \titlespacing{\section}%
   {0pt}{0.2\baselineskip}{0.2\baselineskip}
 % \titlecontents{section}[2.2em]{}%
