@@ -260,7 +260,7 @@
 
 
 %%%%%%%%目录设置%%%%%%%%
-\CTEXsetup[format={\bf}]{chapter}
+% \CTEXsetup[format={\zihao{-4}\songti\bf}]{chapter}
 \CTEXsetup[name={,、}]{chapter}   
 \CTEXsetup[number={ （\chinese{section}）}]{section} 
 \CTEXsetup[number={ \arabic{subsection}.}]{subsection}  
@@ -287,22 +287,23 @@
 
 \titleformat{\chapter}[hang]{\centering\zihao{3}\heiti}{\chinese{chapter}、}{1em}{}{}
 \titlespacing{\chapter}{0pt}{0.2\baselineskip}{0.2\baselineskip}
-% \titlecontents{chapter}[]{\bf}%
-% {\thecontentslabel}{}{\titlerule*[10pt]{.}\contentspage}
+\titlecontents{chapter}[]{\zihao{-4}\heiti}%
+{\thecontentslabel}{}{\titlerule*[5pt]{.}\contentspage}
 
 \titleformat{\section}[hang]%
   {\zihao{4}\heiti}{（\chinese{section}）}{1em}{}{}
 \titlespacing{\section}%
   {0pt}{0.2\baselineskip}{0.2\baselineskip}
-% \titlecontents{section}[2.2em]{}%
-% {\hspace{1em}\thecontentslabel\hspace{1em}}{}{\titlerule*[7pt]{.}\contentspage}
+
+\titlecontents{section}[]{\zihao{-4}\songti}%
+{\hspace{1em}\thecontentslabel}{}{\titlerule*[5pt]{.}\contentspage}
 
 \titleformat{\subsection}[hang]%
-  {\zihao{5}\heiti}{\arabic{subsection}}{1em}{}{}
+  {\zihao{-4}\bf\songti}{\arabic{subsection}}{1em}{}{}
 \titlespacing{\subsection}%
   {0pt}{0.1\baselineskip}{0.1\baselineskip}
-% \titlecontents{subsection}[3.0em]{}%
-% {\hspace{2em}\thecontentslabel\hspace{1em}}{}{\titlerule*[5pt]{.}\contentspage}
+\titlecontents{subsection}[]{}%
+{\hspace{2em}\thecontentslabel}{}{\titlerule*[5pt]{.}\contentspage}
 
 % \titleformat{\subsubsection}[hang]{\zihao{-4}}{\thesubsubsection}{1em}{}{}
 % \titlespacing{\subsubsection}{0pt}{0.0\baselineskip}{0.0\baselineskip}
