@@ -1,0 +1,132 @@
+{ 
+        "files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+        "**/*.toc": true,
+        "**/*.aux": true,
+        "**/*.fls": true,
+        "**/*.out": true,
+        "**/*.gz": true,
+        "**/*.blg": true,
+        "**/*.log": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.bbl": true,
+        "**/*.dia":true,
+        "**/makefile":true,
+        "**/allSchool.md":true,
+        "**/*.tmp":true,
+        "word":true,
+        "**/*.sh":false,
+        "**/*.gitignore":false,
+        "**/*.md":false,
+        "**/*.sty":true,
+    },
+
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "only latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+    
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                    "pdflatex",
+                    "bibtex",
+                    "pdflatex",
+                    "pdflatex"
+            ]
+    
+        },{
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+        ],
+
+        
+        "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },{
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOCFILE%"
+            ]
+        }, {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }, {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },{
+            "name": "makeindex",
+            "command": "makeindex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+        ],
+    
+    
+        "latex-workshop.view.pdf.viewer": "tab",
+        "latex-workshop.view.pdf.hand": true,
+        // "latex-workshop.latex.autoBuild.run": "onFileChange",
+        "latex-workshop.latex.clean.fileTypes": [
+            "*.aux",
+            "*/*.aux",
+            "*.bbl",
+            "*.blg",
+            "*.idx",
+            "*.ind",
+            "*.lof",
+            "*.lot",
+            "*.out",
+            "*.toc",
+            "*.acn",
+            "*.acr",
+            "*.alg",
+            "*.glg",
+            "*.glo",
+            "*.gls",
+            "*.ist",
+            "*.fls",
+            "*.log",
+            "*.spl",
+            "*.synctex.gz",
+            "*.fdb_latexmk"
+        ],   
+        "latex-workshop.latex.autoClean.run": "onBuilt",
+        "latex-workshop.latex.autoBuild.run": "never"
+}
