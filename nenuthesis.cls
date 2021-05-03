@@ -316,6 +316,14 @@
 
 \newcommand{\pozhehao}{\kern0.3ex\rule[0.8ex]{2em}{0.1ex}\kern0.3ex}
 
+%%摘要页面不要页眉只要页脚页码
+\def\ps@nnu@plain{%
+	\let\@oddhead\@empty%
+	\let\@evenhead\@empty%
+	\def\@oddfoot{\hfil\zihao{-5}\thepage\hfil}%
+	\let\@evenfoot=\@oddfoot}
+%%
+
 % 页眉和页脚 ---------------------------------------
 \RequirePackage{fancyhdr}
 %% clear all fields
